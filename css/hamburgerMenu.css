@@ -1,0 +1,16 @@
+/*Light theme colors*/
+:root {
+    --text-color: #1A1B2C;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --text-color: #F0F4FF;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}

@@ -1,0 +1,106 @@
+/*Light theme colors*/
+:root {
+    --headerBackground-color: #99AAFF;
+    --heading-color: #5562D9;
+    --name-color: #3D45B3;
+    --text-color: #1A1B2C;
+    --imageHover-color: #5562D9;
+    --menuBackground-color: #C2CEFF;
+    --borderMenu-color: #C2CEFF;
+    --projectCardBorder-color: #99AAFF;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --headerBackground-color: #2f355b;
+    --heading-color: #8C9BE8;
+    --name-color: #B9C5F3;
+    --text-color: #F0F4FF;
+    --imageHover-color: #8C9BE8;
+    --menuBackground-color: #3D467E;
+    --borderMenu-color: #3D467E;
+    --projectCardBorder-color: #1A1B2C;
+}
+
+.projects {
+    padding-bottom: 10rem;
+}
+
+.projects .heading {
+    color: var(--heading-color);
+}
+
+.projects span {
+    color: var(--name-color);
+}
+
+.projects-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    place-items: center;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--borderMenu-color);
+    border: 2px solid var(--projectCardBorder-color);
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--projectCardBorder-color);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 20px var(--menuBackground-color),
+                0 0 40px var(--menuBackground-color);
+    transform: scale(1.02);
+}
+
+.project-card img {
+    max-width: 300px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 3rem;
+    color: var(--heading-color);
+}
+
+.project-card p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.projectBtn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--headerBackground-color);
+    box-shadow: 0 0 25px var(--headerBackground-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.projectBtn:hover {
+    transform: scale(1.05);
+    background-color: var(--menuBackground-color);
+    box-shadow: 0 0 20px var(--imageHover-color),
+                0 0 35px var(--imageHover-color);
+}
+
+.projectBtn a {
+    color: var(--text-color);
+}

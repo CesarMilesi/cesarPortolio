@@ -1,0 +1,142 @@
+/*Light theme colors*/
+:root {
+    --headerBackground-color: #99AAFF;
+    --heading-color: #5562D9;
+    --name-color: #3D45B3;
+    --text-color: #1A1B2C;
+    --boxBorder-color: #5562D9;
+    --year-color: #3D45B3;
+    --buttonTextHover-color: #3D45B3;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --headerBackground-color: #2f355b;
+    --heading-color: #8C9BE8;
+    --name-color: #B9C5F3;
+    --text-color: #F0F4FF;
+    --boxBorder-color: #8C9BE8;
+    --year-color: #B9C5F3;
+    --buttonTextHover-color: #B9C5F3;
+}
+
+/* Education section */
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education .heading {
+    color: var(--heading-color);
+}
+
+.education span {
+    color: var(--name-color);
+}
+
+.education ul li {
+    color: var(--text-color);
+    margin: 2rem 0 1rem 2rem;
+    font-size: 1.8rem;
+}
+
+.education ul li a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.education ul li a:hover {
+    /* text-decoration: underline; */
+    color: var(--buttonTextHover-color);
+}
+
+.education-row {
+    display: flex;
+    flex-wrap: wrap; /* Align items on 1 line */
+    gap: 5rem;
+}
+
+.education-column {
+    /*
+    [flex-grow] [flex-shrink] [flex-basis]
+    [taile max] [taille min] [taille idéale]
+    */
+    flex: 1 1 40rem;
+}
+
+.education-column .title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 2rem;
+    color: var(--heading-color);
+}
+
+.education-column .education-box {
+    border-left: .2rem solid var(--boxBorder-color);
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--headerBackground-color);
+    border-radius: 50%;
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--boxBorder-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.education-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--headerBackground-color);
+    z-index: -1; /*Put red rectangle behind text*/
+    transition: .5s;
+}
+
+.education-content .content:hover::before {
+    width: 100%;
+} 
+
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: var(--year-color);
+    padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+    padding-right: .5rem;
+}
+
+.education-content .content h3 {
+    font-size: 2rem;
+    color: var(--heading-color);
+}
+
+.education-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+    color: var(--text-color);
+}

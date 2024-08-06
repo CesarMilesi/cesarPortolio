@@ -1,0 +1,102 @@
+/*Light theme colors*/
+:root {
+    --headerBackground-color: #99AAFF;
+    --text-color: #1A1B2C;
+    --link-color: #5562D9;
+    --menuBackground-color: #C2CEFF;
+    --boxBorder-color: #5562D9;
+    --imageHover-color: #5562D9;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --headerBackground-color: #2f355b;
+    --text-color: #F0F4FF;
+    --link-color: #8C9BE8;
+    --menuBackground-color: #3D467E;
+    --boxBorder-color: #8C9BE8;
+    --imageHover-color: #8C9BE8;
+}
+
+
+.cookiesWrapper {
+    position: fixed;
+    bottom: 8rem;
+    left: 8rem;
+    max-width: 35rem;
+    width: 100%;
+    background: var(--menuBackground-color);
+    border-radius: 8px;
+    padding: 2rem 3.5rem 3rem;
+    z-index: 50;
+    transform: scale(0);
+    border: 1px solid var(--boxBorder-color);
+}
+
+.cookiesWrapper.show {
+    transition: all 1s ease;
+    transform: scale(1);
+}
+
+.cookiesWrapper .cookiesHeader {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+}
+
+.cookiesHeader i {
+    color: var(--imageHover-color);
+    font-size: 4rem;
+}
+
+.cookiesHeader h2 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.cookiesWrapper .cookiesData {
+    margin-top: 1.5rem;
+}
+
+.cookiesWrapper .cookiesData p {
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.cookiesData p a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.cookiesData p a:hover {
+    text-decoration: underline;
+}
+
+.cookiesWrapper .cookiesButtons {
+    margin-top: 1.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cookiesButtons .acceptButton,
+.cookiesButtons .declineButton {
+    width: calc(100% / 2 - 10px);
+    padding: 1rem 0;
+    border-radius: 4px;
+    background: var(--headerBackground-color);
+    cursor: pointer;
+    border: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.cookiesButtons .acceptButton:hover,
+.cookiesButtons .declineButton:hover {
+    background-color: var(--menuBackground-color);
+    box-shadow: 0 0 15px var(--imageHover-color),
+                0 0 25px var(--imageHover-color);
+    border: 0;
+}

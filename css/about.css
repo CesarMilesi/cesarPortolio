@@ -1,0 +1,68 @@
+/*Light theme colors*/
+:root {
+    --background2-color: #C2CEFF;
+    --heading2-color: #5562D9;
+    --work-color: #5562D9;
+    --text-color: #1A1B2C;
+    --imageBorder-color: #99AAFF;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --background2-color: #3D467E;
+    --heading2-color: #242845; /* With backgroun which has the second color */
+    --work-color: #8C9BE8;
+    --text-color: #F0F4FF;
+    --imageBorder-color: #4F5CAD;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--background2-color);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.about-Img {
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 20px solid var(--imageBorder-color);
+}
+
+.about-Img img {
+    position: relative;
+    width: 30vw;
+    border-radius: 50%;
+    /* cursor: pointer; */
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h2 {
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 0;
+    color: var(--heading2-color);
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    color: var(--work-color);
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: var(--text-color);
+}
+
+.btn-box.buttons {
+    display: inline-block;
+    width: 15rem;
+}

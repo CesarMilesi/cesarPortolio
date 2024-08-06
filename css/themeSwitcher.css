@@ -1,0 +1,18 @@
+/*Light theme colors*/
+:root {
+    --headerBackground-color: #99AAFF;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --headerBackground-color: #2f355b;
+}
+
+#darkModeToggle {
+    /* align-items: center;
+    gap: 0; */
+    border: none;
+    background-color: var(--headerBackground-color);
+    margin-top: 0.3rem;
+    cursor: pointer;
+}

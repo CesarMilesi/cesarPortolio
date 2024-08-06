@@ -1,0 +1,81 @@
+/*Light theme colors*/
+:root {
+    --menuLanguageBackground-color: #C2CEFF;
+    --menuLanguageHover-color: #99AAFF;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --menuLanguageBackground-color: #3D467E;
+    --menuLanguageHover-color: #4F5CAD;
+}
+
+.drop-down {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--menuLanguageBackground-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    width: 100px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.arrow {
+    font-size: 30px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.selectedFlag,.language > img {
+    height: 20px;
+}
+
+.list {
+    /* background-color: #fff; */
+    position: absolute;
+    top: 45px;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+    cursor: pointer;
+    max-height: 250px;
+    /* overflow-y: scroll; */
+    /* width: 100%; */
+    display: none;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    gap: 0.5rem;
+}
+
+.language:hover {
+    background-color: var(--menuLanguageHover-color);
+}
+
+.show {
+    display: block;
+}
+
+.selectedLanguage,.text {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.jp {
+    /* font-weight: bold; */
+    font-size: 1.3rem;
+}
+
+.list.show {
+    background-color: var(--menuLanguageBackground-color);
+}

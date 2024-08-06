@@ -1,0 +1,83 @@
+.introContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+}
+
+.introduction h1, .light_dark_theme h1, .summary h1  {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 2;
+    color: var(--heading-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.introduction h3, .light_dark_theme h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    /* width: max-content; */
+    text-align: center;
+    -webkit-text-stroke: .7px var(--work-color); /*Width & Color of text*/
+}
+
+.introduction p, .light_dark_theme p {
+    font-size: 1.5rem;
+    margin: 3rem 0 4rem;
+    color: var(--text-color);
+}
+
+.rightIntroContainer ul li,
+.light_dark_theme ol li,
+.tutorialSection ul li {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Light & Dark Theme - Section */
+.light_dark_theme {
+    background-color: var(--menuBackground-color);
+}
+
+.tutorialSection .image {
+    max-width: 50rem;
+}
+
+.btn-box {
+    width: auto;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.btn-box .button {
+    width: auto;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* TECHNO SECTION */
+.techno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5rem;
+}
+
+.technoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.technoBox span {
+    font-size: 2rem;
+}
+
+.techno .bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    color: var(--text-color);
+}

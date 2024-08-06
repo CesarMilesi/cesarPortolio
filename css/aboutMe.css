@@ -1,0 +1,180 @@
+/*Light theme colors*/
+:root {
+    --background2-color: #C2CEFF;
+    --heading-color: #5562D9;
+    --heading2-color: #5562D9;
+    --work-color: #5562D9;
+    --name-color: #3D45B3;
+    --text-color: #1A1B2C;
+    --imageBorder-color: #99AAFF;
+    --boxBorder-color: #5562D9;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --background2-color: #3D467E;
+    --heading-color: #8C9BE8;
+    --heading2-color: #242845; /* With backgroun which has the second color */
+    --work-color: #8C9BE8;
+    --name-color: #B9C5F3;
+    --text-color: #F0F4FF;
+    --imageBorder-color: #4F5CAD;
+    --boxBorder-color: #8C9BE8;
+}
+
+.secondSection {
+    background-color: var(--background2-color);
+}
+
+.about-content {
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+}
+
+.about-content ul li,
+.canDo-content ul li,
+.chapterContent ul li {
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+    color: var(--text-color);
+}
+
+/* EPITA SECTION */
+.chapterOne, .chapterThree {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rem;
+    align-items: center;
+    background-color: var(--background2-color);
+}
+
+.chapterContent {
+    flex: 1 1 40rem;
+}
+
+.chapterOne .imageEpita {
+    flex: 1 1 20rem;
+}
+
+.chapterOne h1, .chapterTwo h1, .chapterThree h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.chapterOne h1 span {
+    color: var(--name-color);
+}
+
+.chapterOne h3,
+.chapterTwo h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--work-color);
+    margin-bottom: 4rem;
+}
+
+.chapterOne p,
+.chapterTwo p {
+    font-size: 1.5rem;
+    margin: 3rem 0 4rem;
+    color: var(--text-color);
+}
+
+.chapterOne .imageEpita img,
+.chapterTwo .imageCaweb img {
+    width: 70%;
+    margin-left: 4rem;
+    border-radius: 35%;
+    margin-top: 5rem;
+}
+
+/* CAWEB SECTION */
+.chapterTwo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rem;
+    margin-bottom: 5rem;
+    /* align-items: center; */
+}
+
+.chapterTwo .imageCaweb {
+    align-self: center;
+}
+
+.chapterTwo .imageCaweb img {
+    border: 3px solid var(--boxBorder-color);
+    border-radius: 20%;
+}
+
+
+/* INTERESTS */
+
+.interests {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10rem;
+}
+
+.interests .box,
+.rightSide .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: auto 4rem;
+}
+
+.box span {
+    font-size: 2rem;
+}
+
+.box .bx {
+    font-size: 10rem;
+    color: var(--text-color);
+}
+
+.box img {
+    width: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+/* CAN DO SECTION */
+.canDo-content {
+    margin: 1rem auto 5rem auto;
+}
+
+.canDo-content .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6rem;
+}
+
+.canDo-content .rightSide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5rem;
+}
+
+.canDo-content h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 2;
+    color: var(--heading-color);
+    margin-bottom: 4rem;
+}
+
+.canDo-content p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.canDo-content ul {
+    margin-top: 5rem;
+}

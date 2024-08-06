@@ -1,0 +1,168 @@
+/*Light theme colors*/
+:root {
+    --heading-color: #5562D9;
+    --name-color: #3D45B3;
+    --work-color: #5562D9;
+    --text-color: #1A1B2C;
+
+    --buttonText-color: #EBEFFF;
+    --buttonBackground-color: #5562D9;
+    --buttonBackgroundHover-color: #EBEFFF;
+    --buttonTextHover-color: #3D45B3;
+    --buttonBorder-color: #5562D9;
+
+    --buttonTextInverse-color: #3D45B3;
+    --buttonBackgroundHoverInverse-color: #5562D9;
+    --buttonTextHoverInverse-color: #EBEFFF;
+
+    --imageHover-color: #5562D9;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --heading-color: #8C9BE8;
+    --name-color: #B9C5F3;
+    --work-color: #8C9BE8;
+    --text-color: #F0F4FF;
+
+    --buttonText-color: #2F355B;
+    --buttonBackground-color: #8C9BE8;
+    --buttonBackgroundHover-color: #2F355B;
+    --buttonTextHover-color: #B9C5F3;
+    --buttonBorder-color: #8C9BE8;
+
+    --buttonTextInverse-color: #B9C5F3;
+    --buttonBackgroundHoverInverse-color: #8C9BE8;
+    --buttonTextHoverInverse-color: #2F355B;
+
+    --imageHover-color: #8C9BE8;
+}
+
+.home {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.home-content {
+    flex: 1 1 40rem;
+    padding-top: 1rem;
+    z-index: 1;
+}
+
+.home .image {
+    flex: 1 1 40rem;
+    z-index: 1;
+}
+
+.home .image img {
+    width: 80%;
+    margin-left: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+.home .image img:hover {
+    box-shadow: 0 5px 15px var(--imageHover-color);
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 2;
+    color: var(--heading-color);
+}
+
+.home-content h1 span {
+    color: var(--name-color);
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    /* width: max-content; */
+    -webkit-text-stroke: .7px var(--work-color); /*Width & Color of text*/
+}
+
+.home-content p {
+    font-size: 1.7rem;
+    margin: 3rem 0 4rem;
+    color: var(--text-color);
+}   
+
+.text-animation {
+    position: relative;
+    /* width: 36rem; */
+}
+
+/* BUTTONS */
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    height: 100%;
+    background-color: var(--buttonBackground-color);
+    border: .2rem solid var(--buttonBorder-color);
+    border-radius: .8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    /* letter-spacing: .1rem; */
+    color: var(--buttonText-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--buttonBackgroundHover-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .button:hover {
+    color: var(--buttonTextHover-color);
+    background-color: var(--buttonBackgroundHover-color);
+}
+
+.btn-box .button:hover::before {
+    width: 100%;
+}
+
+/* Effect for second button */
+.btn-box .button:nth-child(2) {
+    color: var(--buttonTextInverse-color);
+    background: var(--buttonBackgroundHover-color);
+}
+
+.btn-box .button:nth-child(2)::before {
+    background: var(--buttonBackgroundHoverInverse-color);
+}
+
+.btn-box .button:nth-child(2):hover {
+    color: var(--buttonTextHoverInverse-color);
+    background-color: var(--buttonBackgroundHoverInverse-color);
+}
