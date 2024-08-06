@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website - César</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/codifyHeader.css">
+    <link rel="stylesheet" href="../../css/themeSwitcher.css">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="../../css/languageSwitcher.css">
+    <link rel="stylesheet" href="../../css/hamburgerMenu.css">
+    <link rel="stylesheet" href="../../css/cookies.css">
+    <link rel="stylesheet" href="../../css/projects/codify.css">
+    <link rel="stylesheet" href="../../css/mediaQueries.css">
+
+    <!--Additional classes for some icons effects-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+</head>
+<body>
+    <!-- Back to top -->
+    <div id="progress">
+        <span class="progress-value"><i class="bx bx-up-arrow-alt"></i></span>
+    </div>
+
+    <div class="cookiesWrapper">
+        <div class="cookiesHeader">
+            <i class="bx bx-cookie"></i>
+            <h2 data-i18n="cookiesTitle">Cookies Consent</h2>
+        </div>
+
+        <div class="cookiesData">
+            <p data-i18n="cookieText">This website uses cookies to help you have a better and more relevant experience on the website. <a data-i18n="readMoreButton" href="#">Read more ...</a></p>
+        </div>
+
+        <div class="cookiesButtons">
+            <button data-i18n="cookieAccept" class="acceptButton" type="button">Accept</button>
+            <button data-i18n="cookieDecline" class="declineButton" type="button">Decline</button>
+        </div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header">
+        <nav>
+            <div class="navBar">
+                <div class="logoHamburger">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <span class="logo"><a href="../../index.html">César Milesi</a></span>
+                </div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../pages/aboutMe.html">About</a></li>
+                        <li><a href="../../pages/education.html">Education</a></li>
+                        <li><a data-i18n="projet" href="../../pages/projects.html" class="active">Projects</a></li>
+                        <li><a href="../../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-languageBox">
+                    <button type="button" id="darkModeToggle" class="darkModeToggle">
+                        <img id="iconTheme" width="35" height="35" src="../../images/icons/sun.svg" alt="Sun">
+                    </button>
+                    <div class="drop-down">
+                        <div class="wrapper">
+                            <img src="../../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                            <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('codifyProject')">English</div>
+                        </div>
+                        <div class="list">
+                            <div class="language">
+                                <img src="../../images/icons/flags/EN.svg" alt="English flag">
+                                <div class="text">English</div>
+                            </div>
+                            <div class="language">
+                                <img src="../../images/icons/flags/FR.svg" alt="French flag">
+                                <div class="text">Français</div>
+                            </div>
+                            <div class="language">
+                                <img src="../../images/icons/flags/JP.svg" alt="Japanese flag">
+                                <div class="text jp">日本語</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="area">
+        <div class="content">
+            <h1 class="heroText heroAlignment">Find the best Web Tutorials</h1>
+            <svg id="svgNotAnimated" class="logoSvgProperties logoAnimation" xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 200 100">
+                <path d="M24.992,61.32C19.915,61.32 15.499,60.403 11.744,58.568C7.989,56.691 5.109,54.045 3.104,50.632C1.099,47.219 0.096,43.251 0.096,38.728C0.096,32.456 1.269,26.888 3.616,22.024C6.005,17.16 9.227,13.405 13.28,10.76C17.333,8.072 21.835,6.728 26.784,6.728C31.392,6.728 34.891,7.923 37.28,10.312C39.669,12.659 40.864,15.773 40.864,19.656C40.864,22.259 40.395,24.349 39.456,25.928C38.56,27.507 37.259,28.296 35.552,28.296C34.357,28.296 33.419,28.019 32.736,27.464C32.053,26.909 31.712,26.099 31.712,25.032C31.712,24.648 31.797,23.944 31.968,22.92C32.224,21.64 32.352,20.616 32.352,19.848C32.352,15.965 30.283,14.024 26.144,14.024C23.328,14.024 20.64,14.941 18.08,16.776C15.52,18.611 13.451,21.32 11.872,24.904C10.293,28.445 9.504,32.669 9.504,37.576C9.504,42.696 10.933,46.664 13.792,49.48C16.651,52.253 20.875,53.64 26.464,53.64C29.237,53.64 32.032,53.299 34.848,52.616C37.707,51.891 40.864,50.803 44.32,49.352C44.96,49.096 45.493,48.968 45.92,48.968C46.603,48.968 47.115,49.224 47.456,49.736C47.797,50.248 47.968,50.909 47.968,51.72C47.968,54.323 46.56,56.243 43.744,57.48C40.715,58.803 37.557,59.784 34.272,60.424C31.029,61.021 27.936,61.32 24.992,61.32ZM74.962,41.352C75.517,41.352 75.943,41.629 76.242,42.184C76.541,42.739 76.69,43.443 76.69,44.296C76.69,46.344 76.071,47.56 74.834,47.944C72.274,48.84 69.458,49.352 66.386,49.48C65.575,53.064 63.975,55.944 61.586,58.12C59.197,60.253 56.487,61.32 53.458,61.32C50.898,61.32 48.701,60.701 46.866,59.464C45.074,58.227 43.709,56.584 42.77,54.536C41.831,52.488 41.362,50.269 41.362,47.88C41.362,44.637 41.981,41.757 43.218,39.24C44.455,36.68 46.162,34.696 48.338,33.288C50.514,31.837 52.925,31.112 55.57,31.112C58.813,31.112 61.415,32.243 63.378,34.504C65.383,36.723 66.557,39.475 66.898,42.76C68.903,42.632 71.293,42.205 74.066,41.48C74.407,41.395 74.706,41.352 74.962,41.352ZM53.97,54.536C55.335,54.536 56.509,53.981 57.49,52.872C58.514,51.763 59.197,50.163 59.538,48.072C58.215,47.176 57.191,46.003 56.466,44.552C55.783,43.101 55.442,41.565 55.442,39.944C55.442,39.261 55.506,38.579 55.634,37.896L55.314,37.896C53.607,37.896 52.178,38.728 51.026,40.392C49.917,42.013 49.362,44.317 49.362,47.304C49.362,49.651 49.81,51.443 50.706,52.68C51.645,53.917 52.733,54.536 53.97,54.536ZM107.549,46.728C108.104,46.728 108.53,46.984 108.829,47.496C109.17,48.008 109.341,48.712 109.341,49.608C109.341,51.315 108.936,52.637 108.125,53.576C106.376,55.709 104.456,57.544 102.365,59.08C100.274,60.573 98.205,61.32 96.157,61.32C92.914,61.32 90.44,59.421 88.733,55.624C86.941,57.885 85.362,59.4 83.997,60.168C82.674,60.936 81.117,61.32 79.325,61.32C76.722,61.32 74.568,60.36 72.861,58.44C71.197,56.477 70.365,53.939 70.365,50.824C70.365,47.411 71.09,44.253 72.541,41.352C73.992,38.408 75.976,36.019 78.493,34.184C81.053,32.307 83.912,31.197 87.069,30.856C87.88,22.579 89.416,15.517 91.677,9.672C93.981,3.784 96.989,0.84 100.701,0.84C102.536,0.84 104.05,1.672 105.245,3.336C106.482,5 107.101,7.517 107.101,10.888C107.101,15.667 105.928,21.256 103.581,27.656C101.234,34.056 98.098,40.627 94.173,47.368C94.344,49.843 94.706,51.613 95.261,52.68C95.858,53.747 96.605,54.28 97.501,54.28C98.653,54.28 99.826,53.768 101.021,52.744C102.216,51.72 103.816,50.013 105.821,47.624C106.333,47.027 106.909,46.728 107.549,46.728ZM99.997,7.112C99.186,7.112 98.376,8.563 97.565,11.464C96.754,14.323 96.05,18.077 95.453,22.728C94.898,27.379 94.493,32.243 94.237,37.32C99.016,26.909 101.405,18.547 101.405,12.232C101.405,10.611 101.256,9.352 100.957,8.456C100.701,7.56 100.381,7.112 99.997,7.112ZM81.565,54.856C82.376,54.856 83.186,54.536 83.997,53.896C84.808,53.213 85.832,51.976 87.069,50.184C86.642,47.88 86.429,45.299 86.429,42.44C86.429,41.416 86.472,39.752 86.557,37.448C84.21,38.173 82.248,39.752 80.669,42.184C79.133,44.573 78.365,47.24 78.365,50.184C78.365,53.299 79.432,54.856 81.565,54.856ZM112.519,26.952C110.727,26.952 109.383,26.547 108.487,25.736C107.591,24.883 107.143,23.709 107.143,22.216C107.143,20.723 107.719,19.485 108.871,18.504C110.065,17.48 111.537,16.968 113.287,16.968C114.865,16.968 116.145,17.352 117.127,18.12C118.108,18.888 118.599,19.976 118.599,21.384C118.599,23.091 118.044,24.456 116.935,25.48C115.825,26.461 114.353,26.952 112.519,26.952ZM112.007,61.32C109.233,61.32 107.207,60.339 105.927,58.376C104.689,56.413 104.071,53.811 104.071,50.568C104.071,48.648 104.305,46.195 104.775,43.208C105.287,40.179 105.927,37.363 106.695,34.76C107.079,33.395 107.591,32.456 108.231,31.944C108.871,31.432 109.895,31.176 111.303,31.176C113.479,31.176 114.567,31.901 114.567,33.352C114.567,34.419 114.161,36.893 113.351,40.776C112.327,45.469 111.815,48.648 111.815,50.312C111.815,51.592 111.985,52.573 112.327,53.256C112.668,53.939 113.244,54.28 114.055,54.28C114.823,54.28 115.783,53.747 116.935,52.68C118.087,51.613 119.623,49.928 121.543,47.624C122.055,47.027 122.631,46.728 123.271,46.728C123.825,46.728 124.252,46.984 124.551,47.496C124.892,48.008 125.063,48.712 125.063,49.608C125.063,51.315 124.657,52.637 123.847,53.576C119.623,58.739 115.676,61.32 112.007,61.32ZM144.796,43.08C145.99,43.08 146.588,43.976 146.588,45.768C146.588,49.139 143.942,50.824 138.652,50.824C137.628,50.824 136.156,50.632 134.236,50.248C134.79,52.893 135.238,55.837 135.58,59.08C135.964,62.28 136.156,64.925 136.156,67.016C136.156,71.624 135.409,75.144 133.916,77.576C132.422,80.008 130.46,81.224 128.028,81.224C124.956,81.224 122.758,79.048 121.436,74.696C120.156,70.344 119.516,63.773 119.516,54.984C119.516,46.792 120.39,38.493 122.14,30.088C123.932,21.64 126.364,14.664 129.436,9.16C132.55,3.613 135.964,0.84 139.676,0.84C141.681,0.84 143.238,1.736 144.348,3.528C145.5,5.32 146.076,7.731 146.076,10.76C146.076,20.787 140.081,31.709 128.092,43.528C127.665,47.709 127.452,51.379 127.452,54.536C127.452,58.931 127.601,63.432 127.9,68.04C128.198,72.691 128.689,75.016 129.372,75.016C130.652,75.016 131.292,72.797 131.292,68.36C131.292,65.032 131.057,61.811 130.588,58.696C130.161,55.581 129.564,52.296 128.796,48.84C128.753,48.285 128.924,47.581 129.308,46.728C129.734,45.875 130.246,45.128 130.844,44.488C131.441,43.848 131.974,43.528 132.444,43.528C133.297,43.528 134.321,43.571 135.516,43.656C135.9,43.699 136.348,43.72 136.86,43.72C138.566,43.72 140.465,43.571 142.556,43.272C142.897,43.229 143.26,43.187 143.644,43.144C144.028,43.101 144.412,43.08 144.796,43.08ZM138.332,7.176C137.564,7.176 136.604,8.477 135.452,11.08C134.342,13.683 133.233,17.139 132.124,21.448C131.014,25.715 130.054,30.237 129.244,35.016C132.657,31.133 135.281,27.101 137.116,22.92C138.95,18.696 139.889,14.749 139.932,11.08C139.932,8.477 139.398,7.176 138.332,7.176ZM164.16,31.176C165.141,31.176 165.824,31.304 166.208,31.56C166.592,31.816 166.784,32.243 166.784,32.84C166.784,33.864 166.229,37.512 165.12,43.784C164.138,49.8 163.562,53.363 163.392,54.472C161.813,65.437 159.637,74.12 156.864,80.52C154.09,86.92 150.4,90.12 145.792,90.12C143.616,90.12 141.845,89.437 140.48,88.072C139.114,86.749 138.431,85 138.431,82.824C138.431,80.819 138.88,78.771 139.776,76.68C140.714,74.589 142.421,72.179 144.896,69.448C147.413,66.76 150.954,63.667 155.52,60.168L155.712,58.696C156.01,57.117 156.352,54.856 156.736,51.912C155.882,54.984 154.688,57.331 153.152,58.952C151.616,60.531 149.994,61.32 148.288,61.32C146.368,61.32 144.789,60.445 143.552,58.696C142.357,56.904 141.76,54.685 141.76,52.04C141.76,48.84 141.973,45.917 142.4,43.272C142.826,40.584 143.53,37.747 144.512,34.76C144.938,33.48 145.536,32.563 146.304,32.008C147.072,31.453 148.288,31.176 149.952,31.176C150.89,31.176 151.53,31.325 151.872,31.624C152.256,31.923 152.448,32.371 152.448,32.968C152.448,33.309 152.213,34.461 151.744,36.424C151.317,38.003 150.976,39.432 150.72,40.712C150.378,42.461 150.08,44.147 149.824,45.768C149.568,47.347 149.44,48.648 149.44,49.672C149.44,51.293 149.888,52.104 150.784,52.104C151.424,52.104 152.213,51.464 153.152,50.184C154.133,48.904 155.157,46.963 156.224,44.36C157.333,41.757 158.4,38.557 159.424,34.76C159.765,33.48 160.277,32.563 160.96,32.008C161.685,31.453 162.752,31.176 164.16,31.176ZM146.496,83.912C147.562,83.912 148.757,82.675 150.08,80.2C151.402,77.725 152.725,73.608 154.048,67.848C150.762,70.621 148.373,73.139 146.88,75.4C145.429,77.704 144.704,79.709 144.704,81.416C144.704,82.141 144.832,82.739 145.088,83.208C145.386,83.677 145.856,83.912 146.496,83.912Z" />
+            </svg>
+        </div>
+        <ul class="squares">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <section class="introduction">
+        <h1>Introduction</h1>
+        <div class="introContent">
+            <div class="leftIntroContainer">
+                <h3>Summary</h3>
+                <p>
+                    Codify is a website built through a group project. It initially aimed at creating a small multi-page website displaying content and show off a compelling and responsive design, layout along with some technical skills we learnt in the class.<br>
+                    As a group, we decided to build a website about tutorials with detailed sections and explanations.
+                </p>
+                <p>
+                    The project began around the end of November and lasted until the beginning of February.
+                </p>
+            </div>
+            <div class="rightIntroContainer">
+                <h3>My Goals</h3>
+                <p>In this group of 3 people, I was in charge of 2 pages as well as the following tasks:</p>
+                <div class="centerList">
+                    <ul>
+                        <li>Page: Light &amp; Dark Theme</li>
+                        <li>Page: Hamburger Menu</li>
+                        <li>Website: light/dark theme</li>
+                        <li>Website: hamburger menu</li>
+                        <li>Website: responsiveness</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Light & Dark Theme Section -->
+    <section class="light_dark_theme">
+        <div>
+            <h1>Light &amp; Dark Theme | Hamburger Menu</h1>
+            <!-- Structure of the page -->
+            <div>
+                <h3>Structure of the page</h3>
+            </div>
+            <p class="text">
+                For each page, it is structured according to the following order and elements:
+            </p>
+            <div class="centerList">
+                <ol>
+                    <li>An article about the topic</li>
+                    <li>A tutorial section </li>
+                </ol>
+            </div>
+            <p>
+                First, I made some reasearch about the light/dark theme and hamburger menu.
+                I read some articles to understand the pros and cons using these design choices that are really popular nowadays.
+                I tried to make it short and easy enough to understand as it is a tutorial.<br>
+            </p>
+        </div>
+
+        <!-- Tutorial section -->
+        <div class="tutorialSection">
+            <div>
+                <h3>Tutorial Section</h3>
+                <p>
+                    After some explanation on the topic, I had to create a section dedicated to anyone that would like to create its own light/dark theme.
+                    The objective here was to explain the different steps that lead me to get this result.<br>
+                </p>
+                <p>
+                    I splited the tutorial section into 3 parts according to the different technologies I used:
+                </p>
+                <div class="centerList">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript / VueJS</li>
+                    </ul>
+                </div>
+                <p>
+                    And lastly, I ended this page with a section that allows the user to test everything according to the explanations given above.<br>
+                    This section is the result the user should obtain after copy-pasting the code given in the sections above.
+                </p>
+            </div>
+        </div>
+        <a class="btn-box button" target="_blank" href="#">
+            <div class="button">Check out the website !</div>
+        </a>
+    </section>
+
+    <section class="summary">
+        <h1>Technology used in the project</h1>
+        <div class="techno">
+            <div class="technoBox">
+                <i class="bx bxl-html5"></i>
+                <span>HTML</span>
+            </div>
+            <div class="technoBox">
+                <i class="bx bxl-css3" ></i>
+                <span>CSS</span>
+            </div>
+            <div class="technoBox">
+                <i class="bx bxl-javascript"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="technoBox">
+                <i class="bx bxl-vuejs"></i>
+                <span>VueJS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer" id="footer">
+        <div class="footerText">
+            <p data-i18n="copyright">Copyright &copy; Portfolio website made by Cesar MILESI - 2024 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="../../js/darkMode.js"></script>
+    <script src="../../js/languageSelector.js"></script>
+    <script src="../../js/languageSwitcher.js"></script>
+    <script src="../../js/hamburgerMenu.js"></script>
+    <script src="../../js/cookies.js"></script>
+    <script src="../../js/backToTop_header.js"></script>
+</body>
+</html>

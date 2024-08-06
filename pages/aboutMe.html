@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website - César</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cookies.css">
+    <link rel="stylesheet" href="../css/themeSwitcher.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/aboutMe.css">
+    <link rel="stylesheet" href="../css/languageSwitcher.css">
+    <link rel="stylesheet" href="../css/hamburgerMenu.css">
+    <link rel="stylesheet" href="../css/mediaQueries.css">
+
+    <!--Additional classes for some icons effects-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
+</head>
+<body>
+    <!-- Back to top -->
+    <div id="progress">
+        <span class="progress-value"><i class="bx bx-up-arrow-alt"></i></span>
+    </div>
+
+    <div class="cookiesWrapper">
+        <div class="cookiesHeader">
+            <i class="bx bx-cookie"></i>
+            <h2 data-i18n="cookiesTitle">Cookies Consent</h2>
+        </div>
+
+        <div class="cookiesData">
+            <p data-i18n="cookieText">This website uses cookies to help you have a better and more relevant experience on the website. <br><a href="#">Read more ...</a></p>
+        </div>
+
+        <div class="cookiesButtons">
+            <button data-i18n="cookieAccept" class="acceptButton" type="button">Accept</button>
+            <button data-i18n="cookieDecline" class="declineButton" type="button">Decline</button>
+        </div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header">
+        <nav>
+            <div class="navBar">
+                <div class="logoHamburger">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <span class="logo"><a data-i18n="logo" href="../index.html">César</a></span>
+                </div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a data-i18n="home" href="../index.html">Home</a></li>
+                        <li><a data-i18n="about" href="../pages/aboutMe.html" class="active">About</a></li>
+                        <li><a data-i18n="education" href="../pages/education.html">Education</a></li>
+                        <li><a data-i18n="projet" href="../pages/projects.html">Projects</a></li>
+                        <li><a data-i18n="contact" href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-languageBox">
+                    <button type="button" id="darkModeToggle" class="darkModeToggle">
+                        <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
+                    </button>
+                    <div class="drop-down">
+                        <div class="wrapper">
+                            <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                            <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('aboutMe')">English</div>
+                        </div>
+                        <div class="list">
+                            <div class="language">
+                                <img src="../images/icons/flags/EN.svg" alt="English flag">
+                                <div class="text">English</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/FR.svg" alt="French flag">
+                                <div class="text">Français</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
+                                <div class="text jp">日本語</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1 data-i18n="aboutTitle">ABOUT <span>ME</span></h1>
+            <div class="text-animation"> <!--Coordinator of Digital Communication-->
+                <h3 data-i18n="aboutSubTitle">Who am I ?</h3>
+            </div>
+            <p data-i18n="aboutPresentation">Hello, my name is César. I am 24 years old and I live in Strasbourg, France. I am currently finishing a master's degree in multilingual web communication.<br><br>
+
+                After highschool, I joined an engineering school of technology (EPITA). I spent 2 years of the preparatory cycle in Strasbourg where I learnt the basics of programming.
+                I did a 3-year Expert cycle in Paris through apprenticeship in order to get my master's degree.<br><br>
+
+                In order to expand my skills centered on web development, I enrolled in the CAWEB master specialized in multilingual web communication.
+                After a 6-month internship at the European Center for Japanese Studies of Alsace (CEEJA), I am now looking for an opportunity in Japan to use my skills in a professional environment.
+            </p>
+        </div>
+        <div class="image">
+            <img src="../images/AboutPhoto.png" alt="aboutPhoto">
+        </div>
+    </section>
+
+    <section class="chapterOne">
+        <div class="chapterContent">
+            <h1 data-i18n="chapter1">Chapter 1 : <span>EPITA</span></h1>
+            <h3 data-i18n="preparatoryCycle_Title">Preparatory cycle</h3>
+            <p data-i18n="preparatoryCycle_Text">
+                The preparatory cycle lasted 2 years: 1.5 years in Strasbourg and the last semester at Griffith College in Dublin, Ireland, just before the Covid-19 pandemic.
+                Back in France in April 2020, I finished this cycle in my home country. Having more time than usual in this weird period, I decided to start learning Japanese on my own.
+                I passed the JLPT N3 level (Japanese Language Proficiency Test - B1 equivalent) in July 2022 and the N2 level (B2 equivalent) in December 2023.
+            </p>
+            <h3 data-i18n="expertCycle_Title">Expert cycle</h3>
+            <p data-i18n="expertCycle_Text1">
+                In autumn 2020, I continued with the master's degree in Paris and integrated the 3-years Expert cycle in apprenticeship.
+                Focused on web development, I acquired knowledge on many web languages such as:<br>
+            </p>
+            <ul>
+                <li data-i18n="expertCycle_List1">Front-end languages : HTML, CSS, Javascript</li>
+                <li data-i18n="expertCycle_List2">Back-end languages : C#, PHP, SQL (database)</li>
+                <li data-i18n="expertCycle_List3">Frameworks : SASS, jQuery, TailwindCSS, ReactJS</li>
+            </ul>
+            <p data-i18n="expertCycle_Text2">
+                Beside learning theory at school, I practiced through the apprenticeship. Delivering applications for financial companies, I maintained some of their applications.
+                I learnt how to work under pressure, manage missions from start to finish and deliver high quality.<br>
+                The most rewarding mission was the last one which consisted of redesigning the application and adding some new features.
+            </p>
+        </div>
+        <div class="imageEpita">
+            <img src="../images/icons/aboutMe/EPITA.png" alt="">
+        </div>
+    </section>
+
+    <section class="chapterTwo">
+        <div class="chapterContent">
+            <h1 data-i18n="chapter2">Chapter 2 : <span>CAWEB</span></h1>
+            <h3 data-i18n="chapter2_Title">Multilingual Web Communication</h3>
+            <p data-i18n="chapter2_Text1">
+                After my graduation at EPITA, I wanted to combine the web knowledge I had acquired with the foreign languages I had developed these past years.
+                Therefore, I decided to enroll in the CAWEB master.
+                Focused on multilingual web communication, it helped me gain new skills related to web communication, UX/UI Design, marketing and SEO.<br>
+            </p>
+            <p data-i18n="chapter2_Text2">
+                During this year, I evolved as the Project Manager of the team in charge of working on the English part of the master's website. My role consisted of a variety of responsibilities aimed at showcasing the new UX track appearing in September 2024 and maintaining the current website.
+                I also worked on the complete redesign of the master's website (see corresponding section).<br>
+            </p>
+            <p data-i18n="chapter2_Text3">
+                In the second semester, I had the opportunity to do an internship at the Manga, Anime &amp; Japan Arts Society which is the commercial branch of the European Center for Japanese Studies of Alsace (CEEJA).
+                I got involved in 2 exhibitions : the ceramics from the city of Bizen (prefecture of Okayama) and the mangas from the famous mangaka Kaiji Kawaguchi.
+                I was in charge of the following tasks:
+            </p>
+            <ul>
+                <li data-i18n="chapter2_List1">Creation, management and update of the General Data Protection Regulation (GDPR)</li>
+                <li data-i18n="chapter2_List2">Creation of flyers for ceramic exhibitions</li>
+                <li data-i18n="chapter2_List3">Creation of a Proof Of Concept (POC) for a website requested by the city of Bizen to showcase the future exhibitions in Europe as well as the artists and their pieces of art</li>
+                <li data-i18n="chapter2_List4">Creation of Mockups on Figma</li>
+                <li data-i18n="chapter2_List5">Translation of documents related to exhibitions</li>
+            </ul>
+        </div>
+        <div class="imageCaweb">
+            <img src="../images/icons/aboutMe/CAWEB ROND.svg" alt="Caweb logo">
+        </div>
+    </section>
+
+    <section class="chapterThree">
+        <div class="about-content">
+            <h1 data-i18n="interests_Title">My Interests</h1>
+            <p data-i18n="interests_Intro">
+                I am a motivated, creative and team-oriented with a passion for sports, chess, rubik's cube and languages.
+            </p>
+            <div class="interests">
+                <div class="box">
+                    <i class="bx bx-football"></i>
+                    <span data-i18n="interests_One_Title">Sport</span>
+                    <p data-i18n="interests_One_Text">I enjoy playing sports such as football (12 years in club) or judo to develop my team-oriented and decision-making skills.</p>
+                </div>
+                <div class="box">
+                    <i class="bx bxs-chess"></i>
+                    <span data-i18n="interests_Two_Title">Chess</span>
+                    <p data-i18n="interests_Two_Text">I used to play chess in a club for 2 years and now for fun. It helps me to stay concentrate and take décisions under pressure.</p>
+                </div>
+                <div class="box">
+                    <i class="bx bx-cube-alt"></i>
+                    <span data-i18n="interests_Three_Title">Rubik's Cube</span>
+                    <p data-i18n="interests_Three_Text">I have a passion for rubik's cube for several years which stimulates my creativity. In 2017, I participated in the French Open.</p>
+                </div>
+                <div class="box">
+                    <i class="bx bx-flag"></i>
+                    <span data-i18n="interests_Four_Title">Languages</span>
+                    <p data-i18n="interests_Four_Text">I developed a passion for languages these past years and especially with Japanese. It develops my ability to work with others and understand new cultures.</p>
+                </div>
+            </div>
+            <p data-i18n="interests_Summary">
+                My soft skills include empathy, communication, time management, creativity and a passion for learning new things.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHAT CAN I DO FOR YOU -->
+    <section class="canDoSection">
+        <div class="canDo-content">
+            <h1 data-i18n="canDo_Title">What can I do for you ?</h1>
+            <div class="container">
+                <div class="leftSide">
+                    <p data-i18n="canDo_Left_Text">To summarize, here are the tasks I can perform:</p>
+                    <ul>
+                        <li data-i18n="canDo_Left_List1">Creation and maintenance of websites (either using my programming skills or by using a Content Management System (CMS) as Wordpress/Webador)</li>
+                        <li data-i18n="canDo_Left_List2">UX/UI Design for websites &amp; creation of flyers to promote exhibitions and mockups for website's pages</li>
+                        <li data-i18n="canDo_Left_List3">Localization (French, English and Japanese)</li>
+                        <li data-i18n="canDo_Left_List4">Event participation (participation in exhibitions and events to promote the company)</li>
+                    </ul>
+                </div>
+                <div class="rightSide">
+                    <div class="box">
+                        <!-- <i class="bx bx-devices"></i> -->
+                        <img id="website" src="../images/icons/aboutMe/Websites_dark.png" alt="Websites">
+                        <span data-i18n="canDo_Icon1">Websites</span>
+                    </div>
+                    <div class="box">
+                        <!-- <i class="bx bx-image"></i> -->
+                         <img id="ui_ux" src="../images/icons/aboutMe/UI_UX_dark.png" alt="UI_UX">
+                        <span data-i18n="canDo_Icon2">UX/UI Design</span>
+                    </div>
+                    <div class="box">
+                        <!-- <i class="bx bx-devices"></i> -->
+                        <img id="localization" src="../images/icons/aboutMe/Localization_dark.png" alt="Localization">
+                        <span data-i18n="canDo_Icon3">Localization</span>
+                    </div>
+                    <div class="box">
+                        <!-- <i class="bx bx-calendar"></i> -->
+                        <img id="events" src="../images/icons/aboutMe/Events_dark.png" alt="Events">
+                        <span data-i18n="canDo_Icon4">Event participation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer" id="footer">
+        <div class="footerText">
+            <p data-i18n="copyright">Copyright &copy; Portfolio website made by Cesar MILESI - 2024 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="../js/darkMode.js"></script>
+    <script src="../js/languageSelector.js"></script>
+    <script src="../js/languageSwitcher.js"></script>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/backToTop_header.js"></script>
+    <script src="../js/cookies.js"></script>
+</body>
+</html>
