@@ -1,0 +1,20 @@
+{
+	"English": {
+		"cookiesTitle": "Cookies",
+        "cookieText": "This website uses cookies to help you have a better and more relevant experience on the website. <br><a href='#'>Read more ...</a>",
+        "cookieAccept": "Accept",
+        "cookieDecline": "Decline"
+    },
+	"Français": {
+		"cookiesTitle": "Cookies",
+        "cookieText": "Ce site utilise des cookies pour vous aider à avoir une meilleure et plus pertinente expérience sur le site. <br><a href='#'>Lire plus ...</a>",
+        "cookieAccept": "Accepter",
+        "cookieDecline": "Refuser"
+	},
+    "日本語": {
+        "cookiesTitle": "クッキー",
+        "cookieText": "Ce site utilise des cookies pour vous aider à avoir une meilleure et plus pertinente expérience sur le site. <br><a href='#'>詳細 ...</a>",
+        "cookieAccept": "許可",
+        "cookieDecline": "拒否"
+    }
+}

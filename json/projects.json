@@ -1,0 +1,17 @@
+{
+	"English": {
+		"projects_Title": "My <span>Projects</span>",
+		"codify_Explanation": "Tutorial website showcasing programming skills learnt in the CAWEB master.",
+		"codify_Review": "Review Project"
+	},
+	"Français": {
+		"projects_Title": "Mes <span>Projets</span>",
+		"codify_Explanation": "Tutorial website showcasing programming skills learnt in the CAWEB master.",
+		"codify_Review": "Voir le projet"
+	},
+    "日本語": {
+        "projects_Title": "私の<span>プロジェクト</span>",
+		"codify_Explanation": "CAWEB修士号で学びましたプログラミングスキルを紹介する復習のウェブサイト.",
+		"codify_Review": "プロジェクトの批評"
+    }
+}

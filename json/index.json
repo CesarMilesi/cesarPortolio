@@ -1,0 +1,35 @@
+{
+	"English": {
+		"title": "Hi, <br> I'm <span>César Milesi</span>",
+		"homeText": "I finished 3 years of internship, working as a web developer. I am now doing a master degree in Strasbourg (multilingual web communication) to supplement my knowledge. I am looking for a job in digital communication in Japan to apply my skills in a professional environment.",
+		"workTitle": "Expert in Computer Engineering",
+		"aboutMeButton": "About Me",
+		"downloadCvButton": "Download CV",
+		"aboutTitle": "About <span> Me</span>",
+		"aboutWorkTitle": "Coordinator in Digital Communication",
+		"readMoreButton": "Read More",
+		"home_aboutText": "Passionate about maths and technology, I enrolled in an engineering school of technology (EPITA). Having graduated from this master's degree, I applied for the CAWEB master (multilingual web communication) in order to expand my skills as a coordinator in digital communication. Interested about languages and eager to learn more about new fields, you can read more about the different experiences I had by clicking on the button below."
+	},
+	"Français": {
+		"title": "Bonjour, <br> Je m'appelle <span>César Milesi</span>",
+		"homeText": "J'ai terminé un cycle de 3 ans en apprentissage en tant que développeur web. Je consolide mes connaissances cette année avec un master à Strasbourg en communication web multilingue. Je suis à la recherche d'une opportunité au Japon dans le domaine de la communication digitale afin de mettre en pratique mes compétences dans un environnement professionnel.",
+		"workTitle": "Expert en Ingénierie Informatique",
+		"aboutMeButton": "Qui je suis",
+		"downloadCvButton": "Télécharger CV",
+		"aboutTitle": "Qui <span> je suis</span>",
+		"aboutWorkTitle": "Chargé de Communication Digitale",
+		"readMoreButton": "Lire plus",
+		"home_aboutText": "Passionné de maths et d'informatique, j'ai intégré une école d'ingénieur en informatique (EPITA). Ayant obtenu ce master, j'ai candidaté pour le master CAWEB (communication web multilingue) pour obtenir de nouvelles compétences en tant que chargé de communication digitale. Ayant un intérêt pour les langues et désireux d'en apprendre plus sur de nouveaux domaines, vous pouvez en apprendre plus sur mes différentes expériences en cliquant sur le bouton du dessous."
+	},
+    "日本語": {
+		"title": "初めまして、<br> <span>セザール・ミレシ</span>と申します",
+		"homeText": "ウェブプログラミングとして3年間のインターンシップを終えました。今は私の知識を向上させるためにストラスブールに修士課程をしております。プロの環境に応用するために日本で就業機会を探しております。",
+        "workTitle": "計算機工学の専門家",
+		"aboutMeButton": "私について",
+		"downloadCvButton": "履歴書 (PDF)",
+		"aboutTitle": "自己<span>紹介</span>",
+		"aboutWorkTitle": "デジタル通信",
+		"readMoreButton": "詳細",
+		"home_aboutText": "数学と技術について熱が入っておるので、EPITAという計算機工学の大学に入りました。卒業後、デジタル通信に関して新たな資格を取るために、多⾔語ウェブコミュニケーションというCAWEB修⼠課程を申し込みました。言語について興味があって、新たな分野についてもっと学びたいですから、下のボタンをクリックすると、様々な経験しました私について詳しく読むことができます。"
+    }
+}
