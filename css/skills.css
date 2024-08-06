@@ -47,7 +47,7 @@
 
 .main-text span {
     color: var(--name-color);
-    font-size: 5rem;
+    /* font-size: 5rem; */
     font-weight: bold;
     letter-spacing: 2px;
     /* text-transform: uppercase; */
